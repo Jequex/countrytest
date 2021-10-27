@@ -15,7 +15,9 @@ function App() {
   }, []);
 
   if (loading) {
-    return(<div>Loading...</div>)
+    return(<div className="spinner-border text-primary" role="status">
+      <span className="visually-hidden">Loading...</span>
+    </div>)
   } else {
   return (
     <div className="container">
