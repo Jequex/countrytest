@@ -15,31 +15,31 @@ function App() {
   }, []);
 
   if (loading) {
-    return(<div className="spinner-border text-primary" role="status">
-      <span className="visually-hidden">Loading...</span>
-    </div>)
+    return(
+      <div className="container">
+        <div className="row align-items-center justify-content-center" style={{height: '100vh', width: '100%'}}>
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+        )
   } else {
   return (
     <div className="container">
       <div><h3>Country Test</h3></div>
       <hr />
-      <div className="row">
-        <div className="col">
+      <div>
           <label htmlFor="countries" className="form-label">Country</label>
           <select id="countries" className="form-select">
             {countries.map((e, i) => {
               return (<option key={i}>{e.name}</option>)
             })}
           </select>
-        </div>
-        <div className="col">
           <label htmlFor="president" className="form-label">President</label>
           <input name="president" className="form-control" />
-        </div>
-        <div className="col">
-          <div></div>
-          <button className="btn btn-sm btn-primary form-control">Post</button>
-        </div>
+        <br />
+        <button type="submit" className="btn btn-sm btn-primary">Post</button>
       </div>
       <table className="table">
         <thead>
@@ -57,9 +57,9 @@ function App() {
         </thead>
         <tbody>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{}</td>
+            <td>{}</td>
+            <td>{}</td>
           </tr>
         </tbody>
       </table>
