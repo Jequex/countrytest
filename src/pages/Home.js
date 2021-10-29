@@ -27,6 +27,7 @@ const Home = () => {
     return (
       <div>
         <Form countries={countries}/>
+        <br />
         <Table data={data}/>
       </div>
     )
