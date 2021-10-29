@@ -20,14 +20,18 @@ const Home = () => {
 
   const data = useSelector(state => state.countries)
   if (loading) {
-    return (<div className="spinner-border text-primary" role="status">
-      <span className="visually-hidden">Loading...</span>
-    </div>)
+    return (
+      <div className="d-flex align-items-center justify-content-center" style={{width: '100%'}}>
+        <div className="spinner-border text-primary justify-content-center" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    )
   } else {
     return (
       <div>
         <Form countries={countries}/>
-        <br />
+        <br/>
         <Table data={data}/>
       </div>
     )
